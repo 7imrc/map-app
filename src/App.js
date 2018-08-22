@@ -5,16 +5,28 @@ import SearchList from './components/SearchList';
 import Map from './components/Map';
 
 class App extends Component {
+
+
+
+
   render() {
+
+      const location = {
+        lat: 40.7575285,
+        lng: -73.9884469
+      }
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        
         <SearchList />
         <div style={{width: 600, height: 600, background: "red"}}>
-          <Map />
+          <Map
+            center = {location}
+            zoom = {12}
+            containerElement = {<div style={{height: `100%`, width: `100%`}} />}
+            mapElement = {<div style={{ height: `100%` }} />}
+          />
         </div>
       </div>
     );

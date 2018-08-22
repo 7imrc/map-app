@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 class Map extends Component {
   render() {
-    return (
-      <div>
-        This is my Map component
-      </div>
+    return(
+      <GoogleMap
+        defaultZoom = {this.props.zoom}
+        defaultCenter = {this.props.center}
+      >
+      </GoogleMap>
     )
   }
 }
 
-export default Map
+export default withGoogleMap(Map)
