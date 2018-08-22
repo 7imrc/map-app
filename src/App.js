@@ -13,7 +13,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <SearchList />
-        <Map />
+        <div style={{width: 600, height: 600, background: "red"}}>
+          <Map />
+        </div>
       </div>
     );
   }
