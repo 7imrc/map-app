@@ -7,15 +7,13 @@ import Map from './components/Map';
 import OtherMap from './components/OtherMap';
 import ThirdMap from './components/ThirdMap';
 import FourthMap from './components/FourthMap';
+import FifthMap from './components/FifthMap';
 import Footer from './components/Footer';
 
 class App extends Component {
 
   state = {
-    position: {
-      lat: 40.7575285,
-      lng: -73.9884469
-    }
+    position: {lat: 40.7575285, lng: -73.9884469}
   }
 
 
@@ -46,7 +44,11 @@ class App extends Component {
           center = {this.state.position}
           zoom = {15}
         />*/}
-        <FourthMap
+        {/*}<FourthMap
+          center = {this.state.position}
+          zoom = {15}
+        />*/}
+        <FifthMap
           center = {this.state.position}
           zoom = {15}
         />
