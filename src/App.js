@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import SearchList from './components/SearchList';
 import Map from './components/Map';
+import OtherMap from './components/OtherMap';
+import ThirdMap from './components/ThirdMap';
 
 class App extends Component {
 
@@ -18,7 +20,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        
+
         <SearchList />
         <div style={{width: 600, height: 600, background: "red"}}>
           <Map
@@ -28,6 +30,14 @@ class App extends Component {
             mapElement = {<div style={{ height: `100%` }} />}
           />
         </div>
+        <OtherMap
+          center = {location}
+          zoom = {15}
+        />
+        <ThirdMap
+          center = {location}
+          zoom = {15}
+        />
       </div>
     );
   }
