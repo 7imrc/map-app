@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <SearchList />
-        <div style={{width: 600, height: 600, background: "red"}}>
+        {/*}<div style={{width: 600, height: 600, background: "red"}}>
           <Map
             center = {this.state.position}
             zoom = {12}
@@ -45,7 +45,7 @@ class App extends Component {
         <ThirdMap
           center = {this.state.position}
           zoom = {15}
-        />
+        />*/}
         <FourthMap
           center = {this.state.position}
           zoom = {15}
