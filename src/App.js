@@ -5,6 +5,7 @@ import SearchList from './components/SearchList';
 import Map from './components/Map';
 import OtherMap from './components/OtherMap';
 import ThirdMap from './components/ThirdMap';
+import FourthMap from './components/FourthMap';
 
 class App extends Component {
 
@@ -40,6 +41,10 @@ class App extends Component {
           zoom = {15}
         />
         <ThirdMap
+          center = {this.state.position}
+          zoom = {15}
+        />
+        <FourthMap
           center = {this.state.position}
           zoom = {15}
         />
