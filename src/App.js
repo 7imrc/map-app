@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 import SearchList from './components/SearchList';
 import Map from './components/Map';
 import OtherMap from './components/OtherMap';
 import ThirdMap from './components/ThirdMap';
 import FourthMap from './components/FourthMap';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -26,7 +28,7 @@ class App extends Component {
 
     return (
       <div className="App">
-
+        <Header />
         <SearchList />
         <div style={{width: 600, height: 600, background: "red"}}>
           <Map
@@ -48,6 +50,7 @@ class App extends Component {
           center = {this.state.position}
           zoom = {15}
         />
+        <Footer />
       </div>
     );
   }
