@@ -8,7 +8,12 @@ import ThirdMap from './components/ThirdMap';
 
 class App extends Component {
 
-
+  state = {
+    position: {
+      lat: 40.7575285,
+      lng: -73.9884469
+    }
+  }
 
 
   render() {
@@ -24,18 +29,18 @@ class App extends Component {
         <SearchList />
         <div style={{width: 600, height: 600, background: "red"}}>
           <Map
-            center = {location}
+            center = {this.state.position}
             zoom = {12}
             containerElement = {<div style={{height: `100%`, width: `100%`}} />}
             mapElement = {<div style={{ height: `100%` }} />}
           />
         </div>
         <OtherMap
-          center = {location}
+          center = {this.state.position}
           zoom = {15}
         />
         <ThirdMap
-          center = {location}
+          center = {this.state.position}
           zoom = {15}
         />
       </div>
